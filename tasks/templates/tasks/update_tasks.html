@@ -2,13 +2,19 @@
 
 {% include 'tasks/navbar.html' %}
 {% load crispy_forms_tags %}
-<center>
-<h1>update task</h1>
-<form method="POST" action="">
-	{% csrf_token %}
-	{{ form|crispy }}
-	<input type="submit" name="Update Task">
-	
-</form>
-</center>
+
+<div class="container">
+
+	<div class="row">
+		<div class="col-lg-8">
+			<h1>update task</h1>
+			<form method="POST" action="">
+				{% csrf_token %}
+				{{ form|crispy }}
+				<input type="submit" name="Update Task">
+			</form>
+		</div>
+	</div>
+</div>
+
 {% include 'tasks/base.html' %}
